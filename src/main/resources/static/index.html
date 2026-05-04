@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnIt Users</title>
+    <link rel="icon" type="image/png" href="./images/neyIcn.png">
+    <link rel="stylesheet" href="./styles.css">
+</head><body>
+<div id="root">
+    <main class="app-shell">
+        <section class="form-panel">
+            <h1 style="margin-top:0">Loading app...</h1>
+            <p class="status-bar">If this stays here, JavaScript or the React CDN failed to load.</p>
+        </section>
+    </main>
+</div>
+<noscript>
+    <main class="app-shell">
+        <section class="form-panel">
+            <h1 style="margin-top:0">JavaScript is required</h1>
+            <p class="status-bar">Enable JavaScript and reload this page.</p>
+        </section>
+    </main>
+</noscript>
+<script defer crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script defer src="./app.js"></script>
+</body>
+</html>
