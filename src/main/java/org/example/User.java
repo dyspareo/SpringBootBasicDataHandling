@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
+import java.util.Date;
 @Entity
 @Table(name = "users")
 public class User {
@@ -17,6 +17,7 @@ public class User {
     private String name;
     private int age;
     private String email;
+    private Date dob;
 
     public Long getId() {
         return id;
@@ -24,6 +25,14 @@ public class User {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
     }
 
     public String getName() {

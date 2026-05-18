@@ -24,7 +24,7 @@ public User updateUser(Long id, User updatedUser) {
     existing.setName(updatedUser.getName());
     existing.setAge(updatedUser.getAge());
     existing.setEmail(updatedUser.getEmail());
-    
+    existing.setDob(updatedUser.getDob());
     return userRepository.save(existing);
 }
 
