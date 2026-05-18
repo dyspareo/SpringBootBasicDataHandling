@@ -17,6 +17,16 @@ public class UserService {
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
+public User updateUser(Long id, User updatedUser) {
+    User existing = userRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
+    
+    existing.setName(updatedUser.getName());
+    existing.setAge(updatedUser.getAge());
+    existing.setEmail(updatedUser.getEmail());
+    
+    return userRepository.save(existing);
+}
 
     public User getUserById(Long id) {
         return userRepository.findById(id).orElse(null);
